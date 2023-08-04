@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Schedule Event</h1>
+<form action="/schedule" method="post">
+  <div class="form-group">
+    <label for="summary">Event Title</label>
+    <input type="text" name="summary" class="form-control" />
+
+    <label for="description">Event Description</label>
+    <textarea name="description" class="form-control"></textarea>
+
+    <label for="whichDate">Select Date</label>
+    <input type="date" name="whichDate" class="form-control" />
+
+    <label for="whatTime">Select a time:</label>
+    <input type="time" name="whatTime" class="form-control" />
+
+    <label for="timeDuration">Select Time Duration (in hours)</label>
+        <input type="number" name="timeDuration" class="form-control">
+  </div>
+
+  <button type="submit" name="button" class="btn btn-primary">
+    Schedule Event
+  </button>
+</form>
+
+<%- include("partials/footer.ejs") %>
